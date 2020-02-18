@@ -1,0 +1,19 @@
+extends layout
+
+block content
+  h1 Posts
+  table.posts-table
+    thead
+      tr
+        th Id
+        th Title
+        th Author
+        th Body
+    tbody
+      for post in posts
+        tr.posts-table__post-row
+          td.posts-table__post-cell= post.id
+          td.posts-table__post-cell= post.title
+          td.posts-table__post-cell= post.author.name
+          td.posts-table__post-cell= post.body
+
